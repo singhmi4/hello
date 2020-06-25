@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Upgrade all HTTP requests to HTTPS -->
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  -->
     <!-- Bootstrap CSS -->
     <link 
 		  rel="stylesheet" 
@@ -36,10 +36,16 @@
 		  </div>	
 		  <input type="submit" class="btn btn-primary" id="submit" value="Submit">
 		</form>
+
+		<!-- Dashboard -->
+		<div id="dashboard">
+			<img src="https://pixabay.com/get/55e4d4424955af14f6d1867dda35367b1c3cdfe754557349_1920.jpg" class="img-fluid" alt="Responsive image">
+			<button class="btn btn-danger logout btn-lg btn-block mt-2" aria-hidden="true">Logout</button>
+		</div>
 	</div>
 	  
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<!-- Login Successful -->
+	<div class="modal fade" id="modalLoginSuccessful" tabindex="-1" role="dialog" aria-labelledby="modalLoginSuccessful" aria-hidden="true">
 	  <div class="modal-dialog">
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -49,15 +55,38 @@
 			</button>
 		  </div>
 		  <div class="modal-body">
-			<span id="greeting"></span>, <span id="username"></span>!  
+			<span id="greeting"></span>, <span class="username"></span>!  
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			<button type="button" class="btn btn-primary">Logout</button>
+			<button type="button" class="btn btn-danger logout" data-dismiss="modal">Logout</button>
 		  </div>
 		</div>
 	  </div>
 	</div>  
+
+	<!-- Login Successful -->
+	<div class="modal fade" id="modalLogoutSuccessful" tabindex="-1" role="dialog" aria-labelledby="modalLogoutSuccessful" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel">Logout Successful!</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+			  See ya next time, <span class="username"></span>!  
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-primary" data-dismiss="modal">Sign In</button>
+			</div>
+		  </div>
+		</div>
+	  </div>  
+  
+
+	
     
 
     <!-- Optional JavaScript -->
